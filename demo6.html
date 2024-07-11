@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="fullName"> <button onclick="send()">Gửi</button>
+
+
+    <ul id="hung">
+
+    </ul>
+
+    <script>
+        var array = [];
+        function send() {
+            var ip = document.getElementById("fullName");
+            var value = ip.value;
+            array.push(value)
+            var _li = "";
+            for (const item of array) {
+                _li += `<li>${item}</li>`
+            }
+
+            document.getElementById("hung").innerHTML = _li;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-danger {
+            background-color: red;
+            padding: 20px;
+        }
+
+        .bg-dark {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-danger" id="div">
+        <h1>Xin Chào</h1>
+    </div>
+
+    <button onclick="removeClass()">Xóa Class BG-DANGER</button>
+    <button onclick="addClass()">Thêm Class BG_DARK</button>
+
+    <script>
+        function removeClass() {
+            var _div = document.getElementById("div");
+            _div.classList.remove("bg-danger")
+        }
+        function addClass() {
+            var _div = document.getElementById("div");
+            _div.classList.add("bg-dark")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Danh sách sv</h1>
+
+    <div id="hung">
+
+    </div>
+
+    <footer>Chân trang</footer>
+
+    <script>
+        /*
+        Viết chương trình yêu cầu người dùng nhập vào số lượng sinh viên và thông tin của mỗi sinh viên. Đối tượng sinh viên chỉ có 2 thuộc tính id và name. 
+        Tất cả sinh viên sẽ được lưu vào một mảng, in mảng các sinh viên ra màn hình.
+        */
+
+        // // lớp student 
+        // class Student {
+        //     constructor(id, name) {
+        //         this.id = id;
+        //         this.name = name;
+        //     }
+        // }
+        // vd : n = 3 
+        var n = prompt("Nhập số lượng sv cần thêm ");
+        var students = [];
+        for (var i = 0; i < n; i++) {
+            alert("Nhập thông tin sinh vien thứ " + (i + 1));
+            var id = prompt("Nhập vào id sv");
+            var name = prompt("Nhập vào tên sv ");
+            // var student = new Student(id, name);
+            // students.push(student)
+            students.push({ id, name });
+        }
+
+        var _html = "";
+        for (const st of students) {
+            _html += `<li>${st.name}</li>`
+        }
+        console.log(_html);
+        // in thông tin 
+        document.getElementById("hung").innerHTML = `<ul>${_html}</ul>`
+
+
+
+    </script>
+</body>
+
+</html>

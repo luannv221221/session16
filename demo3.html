@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="avatar">
+        <img src="https://gcs.tripi.vn/public-tripi/tripi-feed/img/474015QSt/anh-gai-xinh-1.jpg" alt="" width="300px">
+    </div>
+
+    <button onclick="toggleBtn()" id="btn">Ẩn</button>
+
+    <script>
+        var flag = true;
+        function toggleBtn() {
+            var _avatar = document.getElementById("avatar");
+            var _btn = document.getElementById("btn");
+            if (flag) {
+                _avatar.style = "display: none;";
+                _btn.innerText = "Hiện";
+                flag = false;
+            } else {
+                _avatar.style = "display: block;";
+                _btn.innerText = "Ẩn";
+                flag = true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

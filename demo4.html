@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/demo4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="secction-login">
+        <form action="" class="form">
+            <div class="form-group">
+                <input type="text" placeholder="Email hoặc số điện thoại">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Mật khẩu" value="" onkeydown="showEye()" id="ip_pass">
+                <i class="fa-regular fa-eye-slash" id="icon" onclick="showBat()"></i>
+            </div>
+            <div class="form-group">
+                <button>Đăng Nhập</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function showEye() {
+            var _icon = document.getElementById("icon");
+            _icon.style = "display:block";
+        }
+        function showBat() {
+            var _ip_pass = document.getElementById("ip_pass");
+            var type_input = _ip_pass.getAttribute("type");
+            if (type_input == "password") {
+                _ip_pass.setAttribute("type", "text");
+                var icon = document.getElementById("icon");
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye")
+            } else {
+                _ip_pass.setAttribute("type", "password");
+                var icon = document.getElementById("icon");
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash")
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            background-color: blueviolet;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1" id="d1">
+        <p id="content">jS DOM change CSS </p>
+    </div>
+
+    <button onclick="changeBg()">Đổi màu nền</button>
+
+    <script>
+        function changeBg() {
+            // bước 1 lấy về phần tử DOM cần thao tác 
+            var _div1 = document.getElementById("d1");
+            _div1.style = "background-color: red";
+
+            var _pContent = document.getElementById("content");
+            _pContent.innerText = "Đã đổi màu";
+
+            console.log(_div1);
+
+        }
+        // Bài tập 
+
+    </script>
+</body>
+
+</html>
